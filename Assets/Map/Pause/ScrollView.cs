@@ -33,6 +33,7 @@ public class ScrollView : MonoBehaviour
         if(!enemyManager.isaddmember){
             member1.SetActive(true);
         }
+        Debug.Log("a");
 
         // 設定されたステップサイズに基づいてコンテンツの高さを計算
         RectTransform contentRect = scrollRect.content.GetComponent<RectTransform>();
