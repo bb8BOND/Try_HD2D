@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 17bea8de3d41e8747bb68a59639cfc9c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - SlimePBR: {fileID: 5466824611178924394, guid: 68d0298a966c2034fb06a71a9a2b9b1f, type: 3}
+  - TurtleShellPBR: {fileID: 7550476097206429376, guid: 62753a87c6c1ed2429e7dcd907a925f6, type: 3}
+  - SlimePBR_place: {instanceID: 0}
+  - TurtleShellPBR_place: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
