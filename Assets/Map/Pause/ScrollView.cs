@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,16 +27,40 @@ public class ScrollView : MonoBehaviour
     public GameObject[] members;
     public int memberIndex { get; private set; } = 0;
 
+    string folderPath = "C:/Users/81802/unity/chara"; // 検索したいフォルダのパス
+    List<string> pngFiles = new List<string>();// 指定されたフォルダ内のPNGファイルのパスを格納するリスト
+    public GameObject characterObject_original;
+
     void Start()
     {
         enemyManager = FindObjectOfType<enemy_manager>(); // enemy_managerスクリプトへの参照を取得
+
+        Tuple<int, List<string>> result = Searchfile();
+        int pngCount = result.Item1; // 1番目の返り値(ファイルの総数)を取得
+        List<string> pngFiles = result.Item2; // 2番目の返り値(ファイルのパスのリスト)を取得
+        scrollStep = 1f / pngCount;
+        for (int i = 0; i < pngCount; i++)
+        {
+            GameObject characterObject = Creat_copy(characterObject_original);
+            // 孫オブジェクトを取得
+            Transform childTransform = characterObject.transform.Find("icon");
+            Transform grandchildTransform = childTransform.transform.Find("RawImage");
+            // RawImageコンポーネントを取得
+            RawImage rawImageComponent = grandchildTransform.GetComponent<RawImage>();
+            // PNGファイルをバイトデータとして読み込む
+            byte[] fileData = System.IO.File.ReadAllBytes(pngFiles[i]);
+            // Texture2Dを作成し、PNGデータを読み込む
+            Texture2D texture = new Texture2D(2, 2);
+            texture.LoadImage(fileData);
+            // RawImageコンポーネントのtextureに設定します。
+            rawImageComponent.texture = texture;
+        }
 
         // 初期状態で最初の項目を選択状態とする
         UpdateSelection(selectedIndex);
         if(!enemyManager.isaddmember){
             member1.SetActive(true);
         }
-        Debug.Log("a");
 
         // 設定されたステップサイズに基づいてコンテンツの高さを計算
         RectTransform contentRect = scrollRect.content.GetComponent<RectTransform>();
@@ -143,6 +170,55 @@ public class ScrollView : MonoBehaviour
         return memberIndex;
     }
 
-    
+    // 指定されたフォルダ内のPNGファイルを探す
+    Tuple<int, List<string>> Searchfile()
+    {
+        int pngCount = 0;
+
+        // フォルダが存在しない場合はエラーを表示して終了
+        if (!Directory.Exists(folderPath))
+        {
+            Debug.LogError("指定されたフォルダが存在しません: " + folderPath);
+            return new Tuple<int, List<string>>(0, new List<string>());
+        }
+
+        // フォルダ内のファイルを取得し、PNGファイルをカウントおよびリストに追加
+        string[] files = Directory.GetFiles(folderPath);
+        foreach (string file in files)
+        {
+            if (file.ToLower().EndsWith(".png"))
+            {
+                pngCount++;
+                pngFiles.Add(file); // リストにPNGファイルのパスを追加
+            }
+        }
+
+        // リストに格納されたPNGファイルのパスを表示（デバッグ用）
+        foreach (string pngFilePath in pngFiles)
+        {
+            Debug.Log("PNGファイルのパス: " + pngFilePath);
+        }
+
+        return new Tuple<int, List<string>>(pngCount, pngFiles);
+    }
+
+    //メンバーオブジェクトの複製関数
+    GameObject Creat_copy(GameObject original)
+    {
+        if (original == null)
+        {
+            Debug.LogWarning("Original GameObject is null. Cannot clone.");
+            return null;
+        }
+
+        // オブジェクトを複製し、新しいインスタンスを返す
+        GameObject clonedObject = Instantiate(original, transform.position, transform.rotation);
+        // 複製されたオブジェクトの親をオリジナルと同じに設定する
+        if (original.transform.parent != null)
+        {
+            clonedObject.transform.SetParent(original.transform.parent);
+        }
+        return clonedObject;
+    }
 
 }
