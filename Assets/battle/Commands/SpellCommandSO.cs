@@ -14,7 +14,7 @@ public class SpellCommandsSO: CommandSO
 
     public void Spell(ref int targetHP, int sppw)
     {
-        int spellValue = GetRandomHealValue(sppw); // ƒ‰ƒ“ƒ_ƒ€‚ÈUŒ‚—Í‚ğæ“¾
+        var spellValue = GetRandomHealValue(sppw); // ƒ‰ƒ“ƒ_ƒ€‚ÈUŒ‚—Í‚ğæ“¾
         targetHP -= spellValue;
         Debug.Log($"“G‚É{spellValue}‚Ì–‚–@UŒ‚I “G‚Ìc‚èHP: " + targetHP);
     }
