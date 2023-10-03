@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class enemy_battle : MonoBehaviour
+public class EnemyBattle : MonoBehaviour
 {
     public string name;
     public int hp;

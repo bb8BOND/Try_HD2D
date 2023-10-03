@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
+using Unity.VisualScripting;
 
-public class battle_manager : MonoBehaviour
+public class BattleManager : MonoBehaviour
 {
     // 敵の設定
     public GameObject SlimePBR_battle;
@@ -34,7 +37,7 @@ public class battle_manager : MonoBehaviour
     public AttackCommandSO attackcommandSO;
     public HealCommandSO healcommandSO;
     public SpellCommandSO spellcommandSO;
-    public enemy_AttackCommandSO enemy_attackcommandSO;
+    public EnemyAttackCommandSO enemy_attackcommandSO;
 
     private string[] nowselected;
 
@@ -52,8 +55,8 @@ public class battle_manager : MonoBehaviour
 
     [SerializeField]private Fade fade;
 
-    // enemy_managerスクリプトへの参照
-    //public GameObject enemy_manager;
+    // EnemyManagerスクリプトへの参照
+    //public GameObject EnemyManager;
 
     enum Phase
     {
@@ -86,46 +89,46 @@ public class battle_manager : MonoBehaviour
         // 敵味方の生成
         GameObject enemyPrefab = null;
 
-        if (woman.collidedEnemyName == "GNCT")
+        if (Woman.collidedEnemyName == "GNCT")
         {
             enemyPrefab = SlimePBR_battle;
-            enemyHP = SlimePBR_battle.GetComponent<enemy_battle>().hp;
-            enemyAT = SlimePBR_battle.GetComponent<enemy_battle>().at;
+            enemyHP = SlimePBR_battle.GetComponent<EnemyBattle>().hp;
+            enemyAT = SlimePBR_battle.GetComponent<EnemyBattle>().at;
         }
-        else if (woman.collidedEnemyName == "NITGC")
+        else if (Woman.collidedEnemyName == "NITGC")
         {
             enemyPrefab = TurtleShellPBR_battle;
-            enemyHP = TurtleShellPBR_battle.GetComponent<enemy_battle>().hp;
-            enemyAT = TurtleShellPBR_battle.GetComponent<enemy_battle>().at;
-        }else if (woman.collidedEnemyName == "D科")
+            enemyHP = TurtleShellPBR_battle.GetComponent<EnemyBattle>().hp;
+            enemyAT = TurtleShellPBR_battle.GetComponent<EnemyBattle>().at;
+        }else if (Woman.collidedEnemyName == "D科")
         {
             enemyPrefab = Dragon_1_battle;
-            enemyHP = Dragon_1_battle.GetComponent<enemy_battle>().hp;
-            enemyAT = Dragon_1_battle.GetComponent<enemy_battle>().at;
+            enemyHP = Dragon_1_battle.GetComponent<EnemyBattle>().hp;
+            enemyAT = Dragon_1_battle.GetComponent<EnemyBattle>().at;
         }
-        else if (woman.collidedEnemyName == "C科")
+        else if (Woman.collidedEnemyName == "C科")
         {
             enemyPrefab = Dragon_2_battle;
-            enemyHP = Dragon_2_battle.GetComponent<enemy_battle>().hp;
-            enemyAT = Dragon_2_battle.GetComponent<enemy_battle>().at;
+            enemyHP = Dragon_2_battle.GetComponent<EnemyBattle>().hp;
+            enemyAT = Dragon_2_battle.GetComponent<EnemyBattle>().at;
         }
-        else if (woman.collidedEnemyName == "E科")
+        else if (Woman.collidedEnemyName == "E科")
         {
             enemyPrefab = Dragon_3_battle;
-            enemyHP = Dragon_3_battle.GetComponent<enemy_battle>().hp;
-            enemyAT = Dragon_3_battle.GetComponent<enemy_battle>().at;
+            enemyHP = Dragon_3_battle.GetComponent<EnemyBattle>().hp;
+            enemyAT = Dragon_3_battle.GetComponent<EnemyBattle>().at;
         }
-        else if (woman.collidedEnemyName == "A科")
+        else if (Woman.collidedEnemyName == "A科")
         {
             enemyPrefab = Dragon_4_battle;
-            enemyHP = Dragon_4_battle.GetComponent<enemy_battle>().hp;
-            enemyAT = Dragon_4_battle.GetComponent<enemy_battle>().at;
+            enemyHP = Dragon_4_battle.GetComponent<EnemyBattle>().hp;
+            enemyAT = Dragon_4_battle.GetComponent<EnemyBattle>().at;
         }
-        else if (woman.collidedEnemyName == "M科")
+        else if (Woman.collidedEnemyName == "M科")
         {
             enemyPrefab = Dragon_5_battle;
-            enemyHP = Dragon_5_battle.GetComponent<enemy_battle>().hp;
-            enemyAT = Dragon_5_battle.GetComponent<enemy_battle>().at;
+            enemyHP = Dragon_5_battle.GetComponent<EnemyBattle>().hp;
+            enemyAT = Dragon_5_battle.GetComponent<EnemyBattle>().at;
         }
 
         if (enemyPrefab != null)
@@ -134,24 +137,59 @@ public class battle_manager : MonoBehaviour
             enemy.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
 
-        Debug.Log($"member1は{enemy_manager.member1}");
-        Debug.Log($"member2は{enemy_manager.member2}");
-        Debug.Log($"member3は{enemy_manager.member3}");
-        member1 = friends[enemy_manager.member1];
-        member2 = friends[enemy_manager.member2];
-        member3 = friends[enemy_manager.member3];
+        //ScrollViewスクリプトからSerchfileを参照し、結果をresultに保存する。
+        ScrollView scrollView = new ScrollView();
+        Tuple<int, List<string>> result = scrollView.Searchfile();
+        int pngCount = result.Item1; // 1番目の返り値(ファイルの総数)を取得
+        List<string> pngFiles = result.Item2; // 2番目の返り値(ファイルのパスのリスト)を取得
+        for (int i = 0; i < pngCount; i++)
+        {
+            var gb = new GameObject("character_" + i.ToString(), typeof(SpriteRenderer), typeof(Balance));
+            gb.transform.localScale = new Vector3(0.3f, 0.3f, 1f);
+            var texture = new Texture2D(0, 0);
+            var path = pngFiles[i];
+            var bytes = File.ReadAllBytes(path);
+            texture.LoadImage(bytes);
+            var rect = new Rect(0, 0, texture.width, texture.height);
+            var sprite = Sprite.Create(texture, rect, Vector2.zero);
+            var spriteRenderer = gb.GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = sprite;
+
+            //キャラクターの攻撃力やhpをPlayerPrefsから取得
+            string power_id = i.ToString() + "_Attack";
+            string hp_id = i.ToString() + "_Hp";
+            int attack = PlayerPrefs.GetInt(power_id);
+            int hp = PlayerPrefs.GetInt(hp_id);
+            if(attack != 0 && hp != 0)
+            {
+                gb.GetComponent<Balance>().power = attack;
+                gb.GetComponent<Balance>().hp = hp;
+            }
+
+            // ゲームオブジェクトをfriendsリストに追加
+            Array.Resize(ref friends, friends.Length + 1);
+            friends[friends.Length - 1] = gb;
+            Debug.Log($"リストに{friends[i]}を追加しました。");
+        }
+
+        Debug.Log($"member1は{EnemyManager.member1}");
+        Debug.Log($"member2は{EnemyManager.member2}");
+        Debug.Log($"member3は{EnemyManager.member3}");
+        member1 = friends[EnemyManager.member1];
+        member2 = friends[EnemyManager.member2];
+        member3 = friends[EnemyManager.member3];
         GameObject instantiatedMember1 = Instantiate(member1, member1_place.position, Quaternion.Euler(0f, 90f, 0f));
         GameObject instantiatedMember2 = Instantiate(member2, member2_place.position, Quaternion.Euler(0f, 90f, 0f));
         GameObject instantiatedMember3 = Instantiate(member3, member3_place.position, Quaternion.Euler(0f, 90f, 0f));
-        member1HP = member1.GetComponent<balance>().hp;
-        member2HP = member2.GetComponent<balance>().hp;
-        member3HP = member3.GetComponent<balance>().hp;
-        member1AT = member1.GetComponent<balance>().power;
-        member2AT = member2.GetComponent<balance>().power;
-        member3AT = member3.GetComponent<balance>().power;
-        member1TY = member1.GetComponent<balance>().type;
-        member2TY = member2.GetComponent<balance>().type;
-        member3TY = member3.GetComponent<balance>().type;
+        member1HP = member1.GetComponent<Balance>().hp;
+        member2HP = member2.GetComponent<Balance>().hp;
+        member3HP = member3.GetComponent<Balance>().hp;
+        member1AT = member1.GetComponent<Balance>().power;
+        member2AT = member2.GetComponent<Balance>().power;
+        member3AT = member3.GetComponent<Balance>().power;
+        member1TY = member1.GetComponent<Balance>().type;
+        member2TY = member2.GetComponent<Balance>().type;
+        member3TY = member3.GetComponent<Balance>().type;
 
 
         nowselected = new string[4];
@@ -160,7 +198,7 @@ public class battle_manager : MonoBehaviour
         attackcommandSO = ScriptableObject.CreateInstance<AttackCommandSO>();
         healcommandSO = ScriptableObject.CreateInstance<HealCommandSO>();
         spellcommandSO = ScriptableObject.CreateInstance<SpellCommandSO>();
-        enemy_attackcommandSO = ScriptableObject.CreateInstance<enemy_AttackCommandSO>();
+        enemy_attackcommandSO = ScriptableObject.CreateInstance<EnemyAttackCommandSO>();
     }
 
 
@@ -374,7 +412,7 @@ public class battle_manager : MonoBehaviour
 
     bool Randomescape()
     {
-        bool result = Random.Range(0, 2) == 0; // 0または1のランダムな値を取得
+        bool result = UnityEngine.Random.Range(0, 2) == 0; // 0または1のランダムな値を取得
 
         return result;
     }

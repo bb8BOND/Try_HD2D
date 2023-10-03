@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class result_name : MonoBehaviour
+public class ResultName : MonoBehaviour
 {
     // 敵名前のTextMeshProオブジェクトを参照する変数
     public TextMeshProUGUI enemyNameText;
@@ -15,8 +15,8 @@ public class result_name : MonoBehaviour
 
     private void Start()
     {
-        explainText.text = woman.enemy_explain;
-        enemyNameText.text = woman.collidedEnemyName;
+        explainText.text = Woman.enemy_explain;
+        enemyNameText.text = Woman.collidedEnemyName;
     }
 
     

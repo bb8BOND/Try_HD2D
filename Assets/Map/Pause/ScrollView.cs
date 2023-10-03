@@ -19,7 +19,7 @@ public class ScrollView : MonoBehaviour
     // iconの初期色
     private Color initialIconColor = new Color(100f / 255f, 100f / 255f, 100f / 255f);
 
-    private enemy_manager enemyManager; // ポーズ画面を管理するスクリプトへの参照
+    private EnemyManager enemyManager; // ポーズ画面を管理するスクリプトへの参照
 
     public GameObject member1;
     public GameObject member2;
@@ -33,24 +33,24 @@ public class ScrollView : MonoBehaviour
 
     void Start()
     {
-        enemyManager = FindObjectOfType<enemy_manager>(); // enemy_managerスクリプトへの参照を取得
+        enemyManager = FindObjectOfType<EnemyManager>(); // EnemyManagerスクリプトへの参照を取得
 
-        Tuple<int, List<string>> result = Searchfile();
-        int pngCount = result.Item1; // 1番目の返り値(ファイルの総数)を取得
+        var result = Searchfile();
+        var pngCount = result.Item1; // 1番目の返り値(ファイルの総数)を取得
         List<string> pngFiles = result.Item2; // 2番目の返り値(ファイルのパスのリスト)を取得
         scrollStep = 1f / pngCount;
-        for (int i = 0; i < pngCount; i++)
+        for (var i = 0; i < pngCount; i++)
         {
-            GameObject characterObject = Creat_copy(characterObject_original);
+            var characterObject = Creat_copy(characterObject_original);
             // 孫オブジェクトを取得
-            Transform childTransform = characterObject.transform.Find("icon");
-            Transform grandchildTransform = childTransform.transform.Find("RawImage");
+            var childTransform = characterObject.transform.Find("icon");
+            var grandchildTransform = childTransform.transform.Find("RawImage");
             // RawImageコンポーネントを取得
-            RawImage rawImageComponent = grandchildTransform.GetComponent<RawImage>();
+            var rawImageComponent = grandchildTransform.GetComponent<RawImage>();
             // PNGファイルをバイトデータとして読み込む
-            byte[] fileData = System.IO.File.ReadAllBytes(pngFiles[i]);
+            var fileData = System.IO.File.ReadAllBytes(pngFiles[i]);
             // Texture2Dを作成し、PNGデータを読み込む
-            Texture2D texture = new Texture2D(2, 2);
+            var texture = new Texture2D(2, 2);
             texture.LoadImage(fileData);
             // RawImageコンポーネントのtextureに設定します。
             rawImageComponent.texture = texture;
@@ -63,9 +63,9 @@ public class ScrollView : MonoBehaviour
         }
 
         // 設定されたステップサイズに基づいてコンテンツの高さを計算
-        RectTransform contentRect = scrollRect.content.GetComponent<RectTransform>();
-        float contentHeight = contentRect.sizeDelta.y;
-        float stepHeight =  scrollStep * contentHeight;
+        var contentRect = scrollRect.content.GetComponent<RectTransform>();
+        var contentHeight = contentRect.sizeDelta.y;
+        var stepHeight =  scrollStep * contentHeight;
         scrollRect.content.sizeDelta = new Vector2(contentRect.sizeDelta.x, contentHeight + stepHeight);
     }
 
@@ -109,12 +109,12 @@ public class ScrollView : MonoBehaviour
      // 選択項目の更新
     void UpdateSelection(int direction)
     {
-        Transform contentTransform = scrollRect.content;
-        int itemCount = contentTransform.childCount;
+        var contentTransform = scrollRect.content;
+        var itemCount = contentTransform.childCount;
 
         // 現在の選択項目を非選択状態にする
-        Transform selectedItem = contentTransform.GetChild(selectedIndex);
-        Image selectedImage = selectedItem.Find("icon").GetComponent<Image>();
+        var selectedItem = contentTransform.GetChild(selectedIndex);
+        var selectedImage = selectedItem.Find("icon").GetComponent<Image>();
         selectedImage.color = initialIconColor;
 
         // 新しい選択項目を更新
@@ -122,8 +122,8 @@ public class ScrollView : MonoBehaviour
         selectedIndex = Mathf.Clamp(selectedIndex, 0, itemCount - 1);
 
         // 新しい選択項目を選択状態にする
-        Transform newSelectedItem = contentTransform.GetChild(selectedIndex);
-        Image newSelectedImage = newSelectedItem.Find("icon").GetComponent<Image>();
+        var newSelectedItem = contentTransform.GetChild(selectedIndex);
+        var newSelectedImage = newSelectedItem.Find("icon").GetComponent<Image>();
         newSelectedImage.color = Color.green;
     }
 
@@ -171,9 +171,9 @@ public class ScrollView : MonoBehaviour
     }
 
     // 指定されたフォルダ内のPNGファイルを探す
-    Tuple<int, List<string>> Searchfile()
+    public Tuple<int, List<string>> Searchfile()
     {
-        int pngCount = 0;
+        var pngCount = 0;
 
         // フォルダが存在しない場合はエラーを表示して終了
         if (!Directory.Exists(folderPath))
@@ -183,8 +183,8 @@ public class ScrollView : MonoBehaviour
         }
 
         // フォルダ内のファイルを取得し、PNGファイルをカウントおよびリストに追加
-        string[] files = Directory.GetFiles(folderPath);
-        foreach (string file in files)
+        var files = Directory.GetFiles(folderPath);
+        foreach (var file in files)
         {
             if (file.ToLower().EndsWith(".png"))
             {
@@ -194,7 +194,7 @@ public class ScrollView : MonoBehaviour
         }
 
         // リストに格納されたPNGファイルのパスを表示（デバッグ用）
-        foreach (string pngFilePath in pngFiles)
+        foreach (var pngFilePath in pngFiles)
         {
             Debug.Log("PNGファイルのパス: " + pngFilePath);
         }
@@ -212,7 +212,7 @@ public class ScrollView : MonoBehaviour
         }
 
         // オブジェクトを複製し、新しいインスタンスを返す
-        GameObject clonedObject = Instantiate(original, transform.position, transform.rotation);
+        var clonedObject = Instantiate(original, transform.position, transform.rotation);
         // 複製されたオブジェクトの親をオリジナルと同じに設定する
         if (original.transform.parent != null)
         {

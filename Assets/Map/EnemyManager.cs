@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class enemy_manager : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
     public GameObject SlimePBR;
     public GameObject TurtleShellPBR;

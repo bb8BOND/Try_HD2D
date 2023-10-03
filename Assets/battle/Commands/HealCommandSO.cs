@@ -13,7 +13,7 @@ public class HealCommandSO : CommandSO
 
     public void Heal(ref int targetHP1, ref int targetHP2, ref int targetHP3, int hlp)
     {
-        int healValue = GetRandomHealValue(hlp); // ƒ‰ƒ“ƒ_ƒ€‚È‰ñ•œ—Ê‚ðŽæ“¾
+        var healValue = GetRandomHealValue(hlp); // ƒ‰ƒ“ƒ_ƒ€‚È‰ñ•œ—Ê‚ðŽæ“¾
 
         targetHP1 += healValue;
         targetHP2 += healValue;

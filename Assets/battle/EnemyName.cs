@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class enemy_name : MonoBehaviour
+public class EnemyName : MonoBehaviour
 {
     public string characterName; // キャラクターの名前
     private TextMeshProUGUI textMeshPro; // TextMeshProの参照
@@ -25,7 +25,7 @@ public class enemy_name : MonoBehaviour
         }
 
         //Debug.Log($"{woman.collidedEnemyName}");
-        characterName = woman.collidedEnemyName;
+        characterName = Woman.collidedEnemyName;
 
         // キャラクターの名前をTextMeshProに設定
         textMeshPro.text = characterName;

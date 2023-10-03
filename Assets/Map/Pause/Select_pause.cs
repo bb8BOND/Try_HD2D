@@ -44,7 +44,7 @@ public class Select_pause : MonoBehaviour
         selectedIndex = index;
 
         // 選択されている項目の位置に"now"オブジェクトを移動させる
-        Vector3 targetPosition = options[selectedIndex].transform.position;
+        var targetPosition = options[selectedIndex].transform.position;
         nowIndicator.transform.position = new Vector3(targetPosition.x, targetPosition.y, nowIndicator.transform.position.z);
     }
 }

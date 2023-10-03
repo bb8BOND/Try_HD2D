@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class battle_start : MonoBehaviour
+public class BattleStart : MonoBehaviour
 {
     public GameObject SlimePBR_battle; // ìG1ÇÃê›íË
     public GameObject TurtleShellPBR_battle; // ìG2ÇÃê›íË
@@ -20,11 +20,11 @@ public class battle_start : MonoBehaviour
     {
         GameObject enemyPrefab = null;
 
-        if (woman.collidedEnemyName == "SlimePBR")
+        if (Woman.collidedEnemyName == "SlimePBR")
         {
             enemyPrefab = SlimePBR_battle;
         }
-        else if (woman.collidedEnemyName == "TurtleShellPBR")
+        else if (Woman.collidedEnemyName == "TurtleShellPBR")
         {
             enemyPrefab = TurtleShellPBR_battle;
         }

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class woman : MonoBehaviour
+public class Woman : MonoBehaviour
 {
     private Animator _anim;
     private SpriteRenderer spRenderer;
@@ -10,7 +10,7 @@ public class woman : MonoBehaviour
 
     public static string collidedEnemyName; // 衝突した敵の名前を保持する変数
     public static string enemy_explain;  //敵の説明
-    private enemy_manager enemyManager;
+    private EnemyManager enemyManager;
     private bool stop;
 
     void Start()
@@ -23,8 +23,8 @@ public class woman : MonoBehaviour
 
     void Update()
     {
-        // enemy_manager スクリプトの参照を取得
-        enemyManager = FindObjectOfType<enemy_manager>();
+        // EnemyManager スクリプトの参照を取得
+        enemyManager = FindObjectOfType<EnemyManager>();
 
         if (!enemyManager.isPaused && !stop)
         {

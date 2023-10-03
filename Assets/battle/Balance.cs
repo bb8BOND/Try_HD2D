@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class balance : MonoBehaviour
+public class Balance : MonoBehaviour
 {
     public string name;
-    public int hp;
-    public int power;
+    public int hp = 10;
+    public int power = 5;
     public int type;
 
     void Start()

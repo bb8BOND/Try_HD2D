@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class enemy_move : MonoBehaviour
+public class EnemyMove : MonoBehaviour
 {
     public float[] speedOptions = { 0f, 2f, 4f }; // 移動速度のオプション
 
@@ -32,7 +32,7 @@ public class enemy_move : MonoBehaviour
             SetNewMovementParameters();
         }
 
-        Vector3 movement = movementDirection * movementSpeed * Time.deltaTime;
+        var movement = movementDirection * movementSpeed * Time.deltaTime;
         rb.MovePosition(transform.position + movement);
 
         if (movementSpeed == 0f)
