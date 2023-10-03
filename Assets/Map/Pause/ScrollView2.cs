@@ -22,7 +22,7 @@ public class ScrollView2 : MonoBehaviour
 
     void Start()
     {
-        enemyManager = FindObjectOfType<EnemyManager>(); // EnemyManagerスクリプトへの参照を取得
+        enemyManager = FindFirstObjectByType<EnemyManager>(); // EnemyManagerスクリプトへの参照を取得
 
         // 初期状態で最初の項目を選択状態とする
         UpdateSelection(selectedIndex);
