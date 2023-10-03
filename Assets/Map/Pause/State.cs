@@ -9,12 +9,12 @@ public class State : MonoBehaviour
     void Update()
     {
         // 選択されている項目のImageコンポーネントを取得してStateオブジェクトに表示する
-        int selectedIndex = scrollView.GetSelectedIndex();
-        Transform contentTransform = scrollView.scrollRect.content;
+        var selectedIndex = scrollView.GetSelectedIndex();
+        var contentTransform = scrollView.scrollRect.content;
         if (selectedIndex >= 0 && selectedIndex < contentTransform.childCount)
         {
-            Transform selectedItem = contentTransform.GetChild(selectedIndex);
-            Image selectedImage = selectedItem.Find("icon/Image").GetComponent<Image>(); // Imageコンポーネントを取得
+            var selectedItem = contentTransform.GetChild(selectedIndex);
+            var selectedImage = selectedItem.Find("icon/Image").GetComponent<Image>(); // Imageコンポーネントを取得
             textureDisplay.sprite = selectedImage.sprite; // StateオブジェクトのImageコンポーネントに設定
         }
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class enemy_AttackCommandSO : CommandSO
+public class EnemyAttackCommandSO : CommandSO
 {
 
     public void Attack2(ref int member1HP, ref int member2HP , ref int member3HP , int atpw)

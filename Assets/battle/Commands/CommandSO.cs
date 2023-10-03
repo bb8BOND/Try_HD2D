@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class CommandSO : ScriptableObject
 {
-    public new string Name;
+    public new string name;
 
     // 追加：敵を攻撃するメソッド
     public void Attack(ref int targetHP , int atpw)

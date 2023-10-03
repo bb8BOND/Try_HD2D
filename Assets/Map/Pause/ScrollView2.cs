@@ -15,14 +15,14 @@ public class ScrollView2 : MonoBehaviour
     // iconの初期色
     private Color initialIconColor = new Color(100f / 255f, 100f / 255f, 100f / 255f);
 
-    private enemy_manager enemyManager; // ポーズ画面を管理するスクリプトへの参照
+    private EnemyManager enemyManager; // ポーズ画面を管理するスクリプトへの参照
 
     public GameObject[] members;
     public int memberIndex { get; private set; } = 0;
 
     void Start()
     {
-        enemyManager = FindObjectOfType<enemy_manager>(); // enemy_managerスクリプトへの参照を取得
+        enemyManager = FindFirstObjectByType<EnemyManager>(); // EnemyManagerスクリプトへの参照を取得
 
         // 初期状態で最初の項目を選択状態とする
         UpdateSelection(selectedIndex);
@@ -72,12 +72,12 @@ public class ScrollView2 : MonoBehaviour
     // 選択項目の更新
     void UpdateSelection(int direction)
     {
-        Transform contentTransform = scrollRect.content;
-        int itemCount = contentTransform.childCount;
+        var contentTransform = scrollRect.content;
+        var itemCount = contentTransform.childCount;
 
         // 現在の選択項目を非選択状態にする
-        Transform selectedItem = contentTransform.GetChild(selectedIndex);
-        Image selectedImage = selectedItem.Find("icon").GetComponent<Image>();
+        var selectedItem = contentTransform.GetChild(selectedIndex);
+        var selectedImage = selectedItem.Find("icon").GetComponent<Image>();
         selectedImage.color = initialIconColor;
 
         // 新しい選択項目を更新
@@ -85,8 +85,8 @@ public class ScrollView2 : MonoBehaviour
         selectedIndex = Mathf.Clamp(selectedIndex, 0, itemCount - 1);
 
         // 新しい選択項目を選択状態にする
-        Transform newSelectedItem = contentTransform.GetChild(selectedIndex);
-        Image newSelectedImage = newSelectedItem.Find("icon").GetComponent<Image>();
+        var newSelectedItem = contentTransform.GetChild(selectedIndex);
+        var newSelectedImage = newSelectedItem.Find("icon").GetComponent<Image>();
         newSelectedImage.color = Color.green;
 
     }
