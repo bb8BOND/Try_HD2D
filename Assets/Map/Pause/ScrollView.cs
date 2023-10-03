@@ -33,7 +33,7 @@ public class ScrollView : MonoBehaviour
 
     void Start()
     {
-        enemyManager = FindObjectOfType<EnemyManager>(); // EnemyManagerスクリプトへの参照を取得
+        enemyManager = FindFirstObjectByType<EnemyManager>(); // EnemyManagerスクリプトへの参照を取得
 
         var result = Searchfile();
         var pngCount = result.Item1; // 1番目の返り値(ファイルの総数)を取得
@@ -193,6 +193,9 @@ public class ScrollView : MonoBehaviour
             }
         }
 
+        // リストに格納されたPNGファイルを数値順にソート
+        SortPngFiles();
+
         // リストに格納されたPNGファイルのパスを表示（デバッグ用）
         foreach (var pngFilePath in pngFiles)
         {
@@ -220,5 +223,31 @@ public class ScrollView : MonoBehaviour
         }
         return clonedObject;
     }
+
+    // リストに格納されたPNGファイルを数値順にソートする関数
+    public void SortPngFiles()
+    {
+        pngFiles.Sort((a, b) =>
+        {
+            string fileNameA = Path.GetFileNameWithoutExtension(a);
+            string fileNameB = Path.GetFileNameWithoutExtension(b);
+
+            int numberA, numberB;
+            bool successA = int.TryParse(fileNameA, out numberA);
+            bool successB = int.TryParse(fileNameB, out numberB);
+
+            // 数値に変換できる場合、数値で比較
+            if (successA && successB)
+            {
+                return numberA.CompareTo(numberB);
+            }
+            // 数値に変換できない場合、文字列として比較
+            else
+            {
+                return fileNameA.CompareTo(fileNameB);
+            }
+        });
+    }
+
 
 }
