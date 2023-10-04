@@ -24,7 +24,7 @@ public class Woman : MonoBehaviour
     void Update()
     {
         // EnemyManager スクリプトの参照を取得
-        enemyManager = FindObjectOfType<EnemyManager>();
+        enemyManager = FindFirstObjectByType<EnemyManager>();
 
         if (!enemyManager.isPaused && !stop)
         {

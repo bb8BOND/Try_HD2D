@@ -46,3 +46,10 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+# Setting Files
+UserSettings/
+ProjectSettings/
+
+# VSCode Settings
+.vscode/
