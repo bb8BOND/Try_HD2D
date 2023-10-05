@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1521.6
     height: 806.4
   m_ShowMode: 4
-  m_Title: "\u30D7\u30ED\u30B8\u30A7\u30AF\u30C8"
+  m_Title: "\u30B2\u30FC\u30E0"
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 217
+  controlID: 113
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 218
+  controlID: 120
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 209
+  controlID: 54
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 296
     height: 478.4
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -215,14 +215,14 @@ MonoBehaviour:
     y: 0
     width: 871.19995
     height: 478.4
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Window
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -269,14 +269,14 @@ MonoBehaviour:
     y: 0
     width: 354.40002
     height: 756.4
-  m_MinSize: {x: 100, y: 100}
+  m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -318,11 +318,11 @@ MonoBehaviour:
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
   currentTrackingStatusHasUpdate: 0
-  currentStatusEntriesHasUpdate: 0
-  repositoryProgressHasUpdate: 0
-  appManagerProgressHasUpdate: 0
-  changeTab: 2
-  activeTab: 2
+  currentStatusEntriesHasUpdate: 1
+  repositoryProgressHasUpdate: 1
+  appManagerProgressHasUpdate: 1
+  changeTab: 3
+  activeTab: 3
   initProjectView:
     hasCompletedInitialCheck: 1
     isUserDataPresent: 1
@@ -528,9 +528,9 @@ MonoBehaviour:
     - name: origin/try0930
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 0
-    currentStatusEntriesHasUpdate: 0
-    currentLocksHasUpdate: 0
+    currentBranchHasUpdate: 1
+    currentStatusEntriesHasUpdate: 1
+    currentLocksHasUpdate: 1
     commitBody: 
     commitMessage: 
     currentBranch: try0930
@@ -541,11 +541,33 @@ MonoBehaviour:
         - 00000000000000001000000000000000
         - a2f28428ad0c73946a5ec829bde03602
         - b88600e7077623949a8007f7736b18bc
-        - eb8a50e4c71aa1243b170dfe45aff90d
-        - d9d88d72d65d92d409606deefe2646d6
+        - 3868e38f2e1023849ab2e83b2d826880
+        - d416d1715bbc06d4789612d1211da8d4
+        - ee9311962556494478b4c3eed5b1ff91
+        - 4c7377b5fbe74e84da9ebaa5267fe098
+        - 621f972c0aba75e40b79926f3333a823
+        - ea14070733cbaf74ea6123c23ce8bcef
+        - 26b21e80a4214fd4786440c2a38ae5d1
+        - a30f72eef083d174a8ebae1201c5c671
+        - 4c43de7009ee7b24eb53af9b35896851
+        - 6bd8a8c59def3c744945450cdba543c9
+        - 8d735ce3a9ba69744aefaeb4286add14
+        - b70e784383cbdc744ab56f0cba583b4b
+        - 7fc3789806cb7384c9df39a0b0327468
+        - 5405508cb5f78e44e8fc12d11e3f36e6
+        - 233f284bc04a3e041b16bb32606b9e3b
+        - 21f41466895df244baa05d11ef4ab4b2
+        - 2156cfc40e851644fba03df47dca4e2d
+        - 9350f7627362cb94ba37f6b1085a37db
+        - 17bea8de3d41e8747bb68a59639cfc9c
+        - 32467a012aca8fd489bec22f1e5c8ba7
+        - de81c60777c9a1b48beba0c6d550e71e
+        - 0237ff58a510e6b41a835560ecd1a923
+        - 51e8d6dead25240429ecbd5c7b0dcc69
+        - 3f5d12b4a7343b4468d50331e2028bb3
+        - 754598cc8aeec414891a9a41abd9de47
         - 6ea315d0fd7389c41b19996891e99ae3
         - c732593fe76e5a84197f9cd13963f706
-        - 972f467743147a74384f8467645fa05c
         values:
         - path: Assets
           label: Assets
@@ -601,8 +623,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Asset\Fade\Materials
-          label: Materials
+        - path: Assets\Asset\Fade\Scripts
+          label: Scripts
           level: 3
           isFolder: 1
           isContainer: 0
@@ -619,8 +641,8 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Asset\Fade\Materials\UI-Fade-Alpha.mat
-          label: UI-Fade-Alpha.mat
+        - path: Assets\Asset\Fade\Scripts\Fade.cs
+          label: Fade.cs
           level: 4
           isFolder: 0
           isContainer: 0
@@ -631,12 +653,427 @@ MonoBehaviour:
           checkState: 0
           isLocked: 0
           gitStatusEntry:
-            path: Assets\Asset\Fade\Materials\UI-Fade-Alpha.mat
-            fullPath: C:\Users\81802\unity\Try_HD2D\Assets\Asset\Fade\Materials\UI-Fade-Alpha.mat
-            projectPath: Assets\Asset\Fade\Materials\UI-Fade-Alpha.mat
+            path: Assets\Asset\Fade\Scripts\Fade.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Asset\Fade\Scripts\Fade.cs
+            projectPath: Assets\Asset\Fade\Scripts\Fade.cs
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
+        - path: Assets\battle
+          label: battle
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\battle\BattleManager.cs
+          label: BattleManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\battle\BattleManager.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\BattleManager.cs
+            projectPath: Assets\battle\BattleManager.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\battle\BattleStart.cs
+          label: BattleStart.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\battle\BattleStart.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\BattleStart.cs
+            projectPath: Assets\battle\BattleStart.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\battle\Commands
+          label: Commands
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\battle\Commands\CommandSO.cs
+          label: CommandSO.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\battle\Commands\CommandSO.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\CommandSO.cs
+            projectPath: Assets\battle\Commands\CommandSO.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\battle\Commands\EnemyAttackCommandSO.cs
+          label: EnemyAttackCommandSO.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\battle\Commands\EnemyAttackCommandSO.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\EnemyAttackCommandSO.cs
+            projectPath: Assets\battle\Commands\EnemyAttackCommandSO.cs
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 4
+        - path: Assets\battle\Commands\HealCommandSO.cs
+          label: HealCommandSO.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\battle\Commands\HealCommandSO.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\HealCommandSO.cs
+            projectPath: Assets\battle\Commands\HealCommandSO.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\battle\Commands\SpellCommand SO.cs
+          label: SpellCommand SO.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\battle\Commands\SpellCommand SO.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\SpellCommand
+              SO.cs
+            projectPath: Assets\battle\Commands\SpellCommand SO.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\battle\Commands\SpellCommandSO.cs
+          label: SpellCommandSO.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\battle\Commands\SpellCommandSO.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\SpellCommandSO.cs
+            projectPath: Assets\battle\Commands\SpellCommandSO.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\battle\enemy_battle
+          label: enemy_battle
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\battle\enemy_battle\EnemyBattle.cs
+          label: EnemyBattle.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\battle\enemy_battle\EnemyBattle.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\enemy_battle\EnemyBattle.cs
+            projectPath: Assets\battle\enemy_battle\EnemyBattle.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\battle\EnemyName.cs
+          label: EnemyName.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\battle\EnemyName.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\EnemyName.cs
+            projectPath: Assets\battle\EnemyName.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\battle\ResultName.cs
+          label: ResultName.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\battle\ResultName.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\ResultName.cs
+            projectPath: Assets\battle\ResultName.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Map
+          label: Map
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Map\enemy
+          label: enemy
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Map\enemy\EnemyMove.cs
+          label: EnemyMove.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Map\enemy\EnemyMove.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\enemy\EnemyMove.cs
+            projectPath: Assets\Map\enemy\EnemyMove.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Map\EnemyManager.cs
+          label: EnemyManager.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Map\EnemyManager.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\EnemyManager.cs
+            projectPath: Assets\Map\EnemyManager.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Map\Pause
+          label: Pause
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Map\Pause\ScrollView.cs
+          label: ScrollView.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Map\Pause\ScrollView.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\ScrollView.cs
+            projectPath: Assets\Map\Pause\ScrollView.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Map\Pause\ScrollView2.cs
+          label: ScrollView2.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Map\Pause\ScrollView2.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\ScrollView2.cs
+            projectPath: Assets\Map\Pause\ScrollView2.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Map\Pause\Select_pause.cs
+          label: Select_pause.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Map\Pause\Select_pause.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\Select_pause.cs
+            projectPath: Assets\Map\Pause\Select_pause.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Map\Pause\State.cs
+          label: State.cs
+          level: 3
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Map\Pause\State.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\State.cs
+            projectPath: Assets\Map\Pause\State.cs
+            originalPath: 
+            indexStatus: 3
+            workTreeStatus: 0
+        - path: Assets\Map\Woman.cs
+          label: Woman.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 1
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Map\Woman.cs
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Woman.cs
+            projectPath: Assets\Map\Woman.cs
+            originalPath: 
+            indexStatus: 4
+            workTreeStatus: 0
         - path: Assets\Scenes
           label: Scenes
           level: 1
@@ -668,26 +1105,8 @@ MonoBehaviour:
           isLocked: 0
           gitStatusEntry:
             path: Assets\Scenes\Scene0_map.unity
-            fullPath: C:\Users\81802\unity\Try_HD2D\Assets\Scenes\Scene0_map.unity
+            fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Scenes\Scene0_map.unity
             projectPath: Assets\Scenes\Scene0_map.unity
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 3
-        - path: Assets\Scenes\Scene1_battle.unity
-          label: Scene1_battle.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\Scene1_battle.unity
-            fullPath: C:\Users\81802\unity\Try_HD2D\Assets\Scenes\Scene1_battle.unity
-            projectPath: Assets\Scenes\Scene1_battle.unity
             originalPath: 
             indexStatus: 0
             workTreeStatus: 3
@@ -696,7 +1115,13 @@ MonoBehaviour:
         - Assets
         - Assets\Asset
         - Assets\Asset\Fade
-        - Assets\Asset\Fade\Materials
+        - Assets\Asset\Fade\Scripts
+        - Assets\battle
+        - Assets\battle\Commands
+        - Assets\battle\enemy_battle
+        - Assets\Map
+        - Assets\Map\enemy
+        - Assets\Map\Pause
         - Assets\Scenes
         - UserSettings
         - UserSettings\Layouts
@@ -755,9 +1180,117 @@ MonoBehaviour:
             originalPath: 
             indexStatus: 0
             workTreeStatus: 0
-        - path: Assets\Asset\Fade\Materials
-          label: Materials
+        - path: Assets\Asset\Fade\Scripts
+          label: Scripts
           level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\battle
+          label: battle
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\battle\Commands
+          label: Commands
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\battle\enemy_battle
+          label: enemy_battle
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Map
+          label: Map
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Map\enemy
+          label: enemy
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Map\Pause
+          label: Pause
+          level: 2
           isFolder: 1
           isContainer: 0
           isCollapsed: 0
@@ -909,8 +1442,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Asset\Fade\Materials
-        label: Materials
+      - path: Assets\Asset\Fade\Scripts
+        label: Scripts
         level: 3
         isFolder: 1
         isContainer: 0
@@ -927,8 +1460,8 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: Assets\Asset\Fade\Materials\UI-Fade-Alpha.mat
-        label: UI-Fade-Alpha.mat
+      - path: Assets\Asset\Fade\Scripts\Fade.cs
+        label: Fade.cs
         level: 4
         isFolder: 0
         isContainer: 0
@@ -939,12 +1472,427 @@ MonoBehaviour:
         checkState: 0
         isLocked: 0
         gitStatusEntry:
-          path: Assets\Asset\Fade\Materials\UI-Fade-Alpha.mat
-          fullPath: C:\Users\81802\unity\Try_HD2D\Assets\Asset\Fade\Materials\UI-Fade-Alpha.mat
-          projectPath: Assets\Asset\Fade\Materials\UI-Fade-Alpha.mat
+          path: Assets\Asset\Fade\Scripts\Fade.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Asset\Fade\Scripts\Fade.cs
+          projectPath: Assets\Asset\Fade\Scripts\Fade.cs
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
+      - path: Assets\battle
+        label: battle
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\battle\BattleManager.cs
+        label: BattleManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\battle\BattleManager.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\BattleManager.cs
+          projectPath: Assets\battle\BattleManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\battle\BattleStart.cs
+        label: BattleStart.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\battle\BattleStart.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\BattleStart.cs
+          projectPath: Assets\battle\BattleStart.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\battle\Commands
+        label: Commands
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\battle\Commands\CommandSO.cs
+        label: CommandSO.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\battle\Commands\CommandSO.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\CommandSO.cs
+          projectPath: Assets\battle\Commands\CommandSO.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\battle\Commands\EnemyAttackCommandSO.cs
+        label: EnemyAttackCommandSO.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\battle\Commands\EnemyAttackCommandSO.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\EnemyAttackCommandSO.cs
+          projectPath: Assets\battle\Commands\EnemyAttackCommandSO.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 4
+      - path: Assets\battle\Commands\HealCommandSO.cs
+        label: HealCommandSO.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\battle\Commands\HealCommandSO.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\HealCommandSO.cs
+          projectPath: Assets\battle\Commands\HealCommandSO.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\battle\Commands\SpellCommand SO.cs
+        label: SpellCommand SO.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\battle\Commands\SpellCommand SO.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\SpellCommand
+            SO.cs
+          projectPath: Assets\battle\Commands\SpellCommand SO.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\battle\Commands\SpellCommandSO.cs
+        label: SpellCommandSO.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\battle\Commands\SpellCommandSO.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\SpellCommandSO.cs
+          projectPath: Assets\battle\Commands\SpellCommandSO.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\battle\enemy_battle
+        label: enemy_battle
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\battle\enemy_battle\EnemyBattle.cs
+        label: EnemyBattle.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\battle\enemy_battle\EnemyBattle.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\enemy_battle\EnemyBattle.cs
+          projectPath: Assets\battle\enemy_battle\EnemyBattle.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\battle\EnemyName.cs
+        label: EnemyName.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\battle\EnemyName.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\EnemyName.cs
+          projectPath: Assets\battle\EnemyName.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\battle\ResultName.cs
+        label: ResultName.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\battle\ResultName.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\ResultName.cs
+          projectPath: Assets\battle\ResultName.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Map
+        label: Map
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Map\enemy
+        label: enemy
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Map\enemy\EnemyMove.cs
+        label: EnemyMove.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Map\enemy\EnemyMove.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\enemy\EnemyMove.cs
+          projectPath: Assets\Map\enemy\EnemyMove.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Map\EnemyManager.cs
+        label: EnemyManager.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Map\EnemyManager.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\EnemyManager.cs
+          projectPath: Assets\Map\EnemyManager.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Map\Pause
+        label: Pause
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Map\Pause\ScrollView.cs
+        label: ScrollView.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Map\Pause\ScrollView.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\ScrollView.cs
+          projectPath: Assets\Map\Pause\ScrollView.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Map\Pause\ScrollView2.cs
+        label: ScrollView2.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Map\Pause\ScrollView2.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\ScrollView2.cs
+          projectPath: Assets\Map\Pause\ScrollView2.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Map\Pause\Select_pause.cs
+        label: Select_pause.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Map\Pause\Select_pause.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\Select_pause.cs
+          projectPath: Assets\Map\Pause\Select_pause.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Map\Pause\State.cs
+        label: State.cs
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Map\Pause\State.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\State.cs
+          projectPath: Assets\Map\Pause\State.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - path: Assets\Map\Woman.cs
+        label: Woman.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 1
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Map\Woman.cs
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Woman.cs
+          projectPath: Assets\Map\Woman.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
       - path: Assets\Scenes
         label: Scenes
         level: 1
@@ -976,26 +1924,8 @@ MonoBehaviour:
         isLocked: 0
         gitStatusEntry:
           path: Assets\Scenes\Scene0_map.unity
-          fullPath: C:\Users\81802\unity\Try_HD2D\Assets\Scenes\Scene0_map.unity
+          fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Scenes\Scene0_map.unity
           projectPath: Assets\Scenes\Scene0_map.unity
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
-      - path: Assets\Scenes\Scene1_battle.unity
-        label: Scene1_battle.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Scene1_battle.unity
-          fullPath: C:\Users\81802\unity\Try_HD2D\Assets\Scenes\Scene1_battle.unity
-          projectPath: Assets\Scenes\Scene1_battle.unity
           originalPath: 
           indexStatus: 0
           workTreeStatus: 3
@@ -1017,24 +1947,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: UserSettings\EditorUserSettings.asset
-        label: EditorUserSettings.asset
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\EditorUserSettings.asset
-          fullPath: C:\Users\81802\unity\Try_HD2D\UserSettings\EditorUserSettings.asset
-          projectPath: UserSettings\EditorUserSettings.asset
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       - path: UserSettings\Layouts
         label: Layouts
         level: 1
@@ -1053,24 +1965,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-        label: CurrentMaximizeLayout.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-          fullPath: C:\Users\81802\unity\Try_HD2D\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-          projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 3
       - path: UserSettings\Layouts\default-2023.dwlt
         label: default-2023.dwlt
         level: 2
@@ -1084,7 +1978,7 @@ MonoBehaviour:
         isLocked: 0
         gitStatusEntry:
           path: UserSettings\Layouts\default-2023.dwlt
-          fullPath: C:\Users\81802\unity\Try_HD2D\UserSettings\Layouts\default-2023.dwlt
+          fullPath: C:\Users\81802\unity\Try_HD2D_\UserSettings\Layouts\default-2023.dwlt
           projectPath: UserSettings\Layouts\default-2023.dwlt
           originalPath: 
           indexStatus: 0
@@ -1109,51 +2003,136 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
-    - path: Assets\Asset\Fade\Materials\UI-Fade-Alpha.mat
-      fullPath: C:\Users\81802\unity\Try_HD2D\Assets\Asset\Fade\Materials\UI-Fade-Alpha.mat
-      projectPath: Assets\Asset\Fade\Materials\UI-Fade-Alpha.mat
+    - path: Assets\Asset\Fade\Scripts\Fade.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Asset\Fade\Scripts\Fade.cs
+      projectPath: Assets\Asset\Fade\Scripts\Fade.cs
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
+    - path: Assets\battle\BattleManager.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\BattleManager.cs
+      projectPath: Assets\battle\BattleManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\battle\BattleStart.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\BattleStart.cs
+      projectPath: Assets\battle\BattleStart.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\battle\Commands\CommandSO.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\CommandSO.cs
+      projectPath: Assets\battle\Commands\CommandSO.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\battle\Commands\EnemyAttackCommandSO.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\EnemyAttackCommandSO.cs
+      projectPath: Assets\battle\Commands\EnemyAttackCommandSO.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 4
+    - path: Assets\battle\Commands\HealCommandSO.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\HealCommandSO.cs
+      projectPath: Assets\battle\Commands\HealCommandSO.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\battle\Commands\SpellCommand SO.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\SpellCommand
+        SO.cs
+      projectPath: Assets\battle\Commands\SpellCommand SO.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\battle\Commands\SpellCommandSO.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\Commands\SpellCommandSO.cs
+      projectPath: Assets\battle\Commands\SpellCommandSO.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\battle\enemy_battle\EnemyBattle.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\enemy_battle\EnemyBattle.cs
+      projectPath: Assets\battle\enemy_battle\EnemyBattle.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\battle\EnemyName.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\EnemyName.cs
+      projectPath: Assets\battle\EnemyName.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\battle\ResultName.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\battle\ResultName.cs
+      projectPath: Assets\battle\ResultName.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Map\enemy\EnemyMove.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\enemy\EnemyMove.cs
+      projectPath: Assets\Map\enemy\EnemyMove.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Map\EnemyManager.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\EnemyManager.cs
+      projectPath: Assets\Map\EnemyManager.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Map\Pause\ScrollView.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\ScrollView.cs
+      projectPath: Assets\Map\Pause\ScrollView.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Map\Pause\ScrollView2.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\ScrollView2.cs
+      projectPath: Assets\Map\Pause\ScrollView2.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Map\Pause\Select_pause.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\Select_pause.cs
+      projectPath: Assets\Map\Pause\Select_pause.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Map\Pause\State.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Pause\State.cs
+      projectPath: Assets\Map\Pause\State.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets\Map\Woman.cs
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Map\Woman.cs
+      projectPath: Assets\Map\Woman.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
     - path: Assets\Scenes\Scene0_map.unity
-      fullPath: C:\Users\81802\unity\Try_HD2D\Assets\Scenes\Scene0_map.unity
+      fullPath: C:\Users\81802\unity\Try_HD2D_\Assets\Scenes\Scene0_map.unity
       projectPath: Assets\Scenes\Scene0_map.unity
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    - path: Assets\Scenes\Scene1_battle.unity
-      fullPath: C:\Users\81802\unity\Try_HD2D\Assets\Scenes\Scene1_battle.unity
-      projectPath: Assets\Scenes\Scene1_battle.unity
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\EditorUserSettings.asset
-      fullPath: C:\Users\81802\unity\Try_HD2D\UserSettings\EditorUserSettings.asset
-      projectPath: UserSettings\EditorUserSettings.asset
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
-    - path: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-      fullPath: C:\Users\81802\unity\Try_HD2D\UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-      projectPath: UserSettings\Layouts\CurrentMaximizeLayout.dwlt
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
     - path: UserSettings\Layouts\default-2023.dwlt
-      fullPath: C:\Users\81802\unity\Try_HD2D\UserSettings\Layouts\default-2023.dwlt
+      fullPath: C:\Users\81802\unity\Try_HD2D_\UserSettings\Layouts\default-2023.dwlt
       projectPath: UserSettings\Layouts\default-2023.dwlt
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 6 changed files
+    changedFilesText: 20 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2023-10-03T09:19:39.575+09:00
+      updatedTimeString: 2023-10-05T14:25:06.927+09:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2023-10-03T10:09:59.929+09:00
+      updatedTimeString: 2023-10-05T14:25:07.319+09:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2023-10-03T10:08:06.984+09:00
+      updatedTimeString: 2023-10-05T14:25:08.635+09:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -29026,8 +30005,8 @@ MonoBehaviour:
   currentRemoteName: origin
   currentBranch: try0930
   currentRemoteUrl: https://github.com/bb8BOND/Try_HD2D.git
-  statusAhead: 0
-  statusBehind: 0
+  statusAhead: 2
+  statusBehind: 7
   hasItemsToCommit: 1
   isTrackingRemoteBranch: 1
   currentBranchContent:
@@ -29041,13 +30020,13 @@ MonoBehaviour:
     m_Tooltip: Url of the origin remote
     m_TextWithWhitespace: "https://github.com/bb8BOND/Try_HD2D.git\u200B"
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2023-10-03T10:17:08.220+09:00
+    updatedTimeString: 2023-10-05T14:11:29.760+09:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2023-10-03T10:21:37.641+09:00
+    updatedTimeString: 2023-10-05T14:12:56.345+09:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2023-10-03T10:29:39.481+09:00
+    updatedTimeString: 2023-10-05T14:15:40.510+09:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -29113,7 +30092,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 50540000
+      m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: f8faffff
       m_RenameOverlay:
@@ -29208,7 +30187,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -29598,6 +30577,19 @@ MonoBehaviour:
       layout: 4
       size: {x: 0, y: 0}
       sizeOverridden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: UnityEditor.SceneViewCameraOverlay
+      index: 9
+      layout: 4
+      size: {x: 40, y: 40}
+      sizeOverridden: 0
     m_ContainerData:
     - containerId: overlay-toolbar__top
       scrollOffset: 0
@@ -29624,9 +30616,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: 0.14740753, y: 7.426674, z: -11.618982}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: 0.14740753, y: 7.426674, z: -11.618982}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -29672,9 +30664,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.22075099, y: 0.65273005, z: -0.20751196, w: 0.69437236}
+    m_Target: {x: -0.049580492, y: -0.87338644, z: 0.090992406, w: -0.47587854}
     speed: 2
-    m_Value: {x: 0.22075081, y: 0.6527295, z: -0.20751178, w: 0.69437176}
+    m_Value: {x: -0.049580444, y: -0.8733856, z: 0.09099232, w: -0.4758781}
   m_Size:
     m_Target: 10
     speed: 2
@@ -29748,9 +30740,9 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 1
-    m_SearchArea: 3
+    m_SearchArea: 1
     m_Folders:
-    - Assets/Map/Pause
+    - Assets/Map
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -29760,30 +30752,30 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Map/Pause
+  - Assets/Map
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\81802\unity\Try_HD2D
+  m_LastProjectPath: C:\Users\81802\unity\Try_HD2D_
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 96740000
-    m_LastClickedID: 29846
-    m_ExpandedIDs: 00000000627400006474000066740000687400006a7400008a7400008c7400008e74000000ca9a3b
+    scrollPos: {x: 0, y: 61.499786}
+    m_SelectedIDs: c0740000
+    m_LastClickedID: 29888
+    m_ExpandedIDs: 00000000b4740000b6740000b8740000ba740000bc740000be740000c074000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Scene0_map_Profiles
-      m_OriginalName: Scene0_map_Profiles
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 33922
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -29797,7 +30789,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000627400006474000066740000687400006a74000000ca9a3b
+    m_ExpandedIDs: 00000000b4740000b6740000b8740000ba740000bc740000be740000c0740000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -29824,7 +30816,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000d45e0000286efcff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -29931,7 +30923,7 @@ MonoBehaviour:
     m_CachedPref: -217
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 21584
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

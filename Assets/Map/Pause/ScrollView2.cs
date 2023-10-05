@@ -102,7 +102,4 @@ public class ScrollView2 : MonoBehaviour
     {
         return memberIndex;
     }
-
-
-
 }
