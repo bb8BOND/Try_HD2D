@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 
@@ -27,18 +28,22 @@ public class ScrollView : MonoBehaviour
     public GameObject[] members;
     public int memberIndex { get; private set; } = 0;
 
-    string folderPath = "C:/Users/81802/unity/chara"; // 検索したいフォルダのパス
-    List<string> pngFiles = new List<string>();// 指定されたフォルダ内のPNGファイルのパスを格納するリスト
+    string folderPath = "C:\\Users\\81802\\unity\\chara"; // 検索したいフォルダのパス
+    public List<string> pngFiles = new List<string>();// 指定されたフォルダ内のPNGファイルのパスを格納するリスト
     public GameObject characterObject_original;
+    public int nowchara_index;
+
+    public int pngCount;
 
     void Start()
     {
         enemyManager = FindFirstObjectByType<EnemyManager>(); // EnemyManagerスクリプトへの参照を取得
 
         var result = Searchfile();
-        var pngCount = result.Item1; // 1番目の返り値(ファイルの総数)を取得
-        List<string> pngFiles = result.Item2; // 2番目の返り値(ファイルのパスのリスト)を取得
-        scrollStep = 1f / pngCount;
+        pngCount = result.Item1; // 1番目の返り値(ファイルの総数)を取得
+        Debug.Log("pngCount:"+pngCount);
+        List<String> a = result.Item2; // 2番目の返り値(ファイルのパスのリスト)を取得
+        scrollStep = (1f+(1f / pngCount)) / pngCount;
         for (var i = 0; i < pngCount; i++)
         {
             var characterObject = Creat_copy(characterObject_original);
@@ -57,7 +62,8 @@ public class ScrollView : MonoBehaviour
         }
 
         // 初期状態で最初の項目を選択状態とする
-        UpdateSelection(selectedIndex);
+        UpdateSelection(1);
+
         if(!enemyManager.isaddmember){
             member1.SetActive(true);
         }
@@ -104,6 +110,7 @@ public class ScrollView : MonoBehaviour
     void ScrollDown()
     {
         scrollRect.verticalNormalizedPosition = scrollRect.verticalNormalizedPosition - scrollStep;
+        nowchara_index++;
     }
 
      // 選択項目の更新
@@ -111,6 +118,7 @@ public class ScrollView : MonoBehaviour
     {
         var contentTransform = scrollRect.content;
         var itemCount = contentTransform.childCount;
+        Debug.Log("itemCount:" + itemCount);
 
         // 現在の選択項目を非選択状態にする
         var selectedItem = contentTransform.GetChild(selectedIndex);
@@ -119,7 +127,8 @@ public class ScrollView : MonoBehaviour
 
         // 新しい選択項目を更新
         selectedIndex += direction;
-        selectedIndex = Mathf.Clamp(selectedIndex, 0, itemCount - 1);
+        selectedIndex = Mathf.Clamp(selectedIndex, 1, itemCount -1);
+        Debug.Log("selectedIndex:" + selectedIndex);
 
         // 新しい選択項目を選択状態にする
         var newSelectedItem = contentTransform.GetChild(selectedIndex);
@@ -169,6 +178,7 @@ public class ScrollView : MonoBehaviour
     {
         return memberIndex;
     }
+
 
     // 指定されたフォルダ内のPNGファイルを探す
     public Tuple<int, List<string>> Searchfile()
@@ -221,6 +231,7 @@ public class ScrollView : MonoBehaviour
         {
             clonedObject.transform.SetParent(original.transform.parent);
         }
+        clonedObject.SetActive(true);
         return clonedObject;
     }
 

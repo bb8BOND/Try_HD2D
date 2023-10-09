@@ -33,11 +33,13 @@ public class EnemyManager : MonoBehaviour
     // Pが押されたかどうかを保存する変数
     private bool isPKeyPressed = false;
 
-    public GameObject nowIndicator; // "now"を示すオブジェクト
-    public GameObject optionsPanel; // 選択肢の親パネル
+    public GameObject nowIndicator; // ポーズ画面の"now"を示すオブジェクト
+    public GameObject optionsPanel; // ポーズ画面の選択肢の親パネル
     private bool isInputEnabled = true; // 入力の有効化フラグ
     private bool onselect = false;//選択コマンドの移動を管理
-    private int selectedIndex = 0;      // 選択されている項目のインデックス
+    private int selectedIndex = 0;      // 選択されている(チーム一覧の)項目のインデックス
+
+    private GameObject nowmember;// 現在のメンバー一覧の"now"を示すオブジェクト
 
     public GameObject canvasObject; // シリアライズフィールドを使用して、インスペクター上でCanvasオブジェクトを指定
     public GameObject titlecheck;
@@ -48,9 +50,9 @@ public class EnemyManager : MonoBehaviour
 
     [SerializeField]private Fade fade;
 
-    static public int member1 = 0;
-    static public int member2 = 1;
-    static public int member3 = 2;
+    static public int member1 = 1;
+    static public int member2 = 2;
+    static public int member3 = 3;
     static public int addmem;
 
     public GameObject Addmem;
@@ -295,7 +297,7 @@ public class EnemyManager : MonoBehaviour
                 case Phase.editteam:
                     Debug.Log("editteam Phaseが実行されました");
                     ScrollView .SetActive(true);
-                    //State.SetActive(true);
+                    State.SetActive(true);
                     iseditteam = true;
                     yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.U) || Input.GetKeyDown(KeyCode.I));
                     Debug.Log("選択されました。");
@@ -303,6 +305,7 @@ public class EnemyManager : MonoBehaviour
                     if (Input.GetKeyDown(KeyCode.I))
                     {
                         ScrollView .SetActive(false);
+                        State.SetActive(false);
                         iseditteam = false;
                         currentPhase = Phase.Selectoption;
                     }
